@@ -36,3 +36,618 @@
     transform: rotate(360deg);
   }
 }
+
+/* Polices */
+
+@font-face
+{
+	font-family: "Cookie";
+	src: url("./fonts/Cookie/Cookie-Regular.ttf");
+}
+
+@font-face
+{
+	font-family: "Abel";
+	src: url("./fonts/Abel/abel-regular.ttf");
+}
+
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+section
+{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: #DA6A59;
+}
+
+#formulaire
+{
+	height: 50vh;
+	width: 70vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#formulaire > h1
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 5em;
+	color: white;
+	text-align: center;
+}
+
+#formulaire > form
+{
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+form input
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.4em;
+}
+
+form label
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 2em;
+}
+
+button, .button
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.4em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+input
+{
+	border-radius: 10px;
+}
+
+.loading
+{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	z-index: 100;
+	cursor: progress;
+}
+
+.loading::before
+{
+	content: "Veuillez patienter le temps que tous les utilisateurs nous rejoignent...";
+	text-align: center;
+	padding-top: 20vh;
+	color: white;
+	font-family: 'Cookie', sans-serif;
+	font-size: 3em;
+	position: absolute;
+	height: 80vh;
+	width: 100vw;
+	z-index: 101;
+	background-color: #DA6A59;
+	opacity: 1;
+	overflow: hidden;
+}
+
+.loading::after
+{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+	border: 10px solid white;
+	border-top: 10px solid #DA6A59;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	z-index: 102;
+	animation: custom-loading 2s linear infinite;
+}
+
+@keyframes custom-loading {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+header
+{
+	height: 15vh;
+	width: 80vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+header > h2
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 3em;
+	color: white;
+}
+
+header > div
+{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+header > div h3
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.5em;
+	margin: 0;
+	color: #000000;
+}
+
+header > div > a
+{
+	text-decoration: none;
+}
+
+header > div > a > h3:last-child
+{
+	font-size: 1.8em;
+	color: white;
+}
+
+#appli
+{
+	align-items: flex-start;
+}
+
+#blocs
+{
+	height: 80vh;
+	width: 60vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#blocs div
+{
+	height: 30vh;
+	width: 26vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	opacity: 1;
+	transition: 0.5s ease;
+	box-shadow: -0.5em -0.5em white;
+}
+
+#blocs div:hover
+{
+	opacity: 0.5;
+	transition: 0.5s ease;
+}
+
+#blocs > a
+{
+	text-decoration: none;
+}
+
+#blocs > a:nth-child(1) > div
+{
+	background-color: #79DD9A;
+}
+
+#blocs > a:nth-child(2) > div
+{
+	background-color: #79C2DD;
+}
+
+#blocs > a:nth-child(3) > div
+{
+	background-color: #D479DD;
+}
+
+#blocs > a:nth-child(4) > div
+{
+	background-color: #DDDD79;
+}
+
+#blocs div > p
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 3em;
+	color: white;
+}
+
+#start
+{
+	width: 80vw;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#start > h1
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 4em;
+	color: white;
+	text-align: center;
+}
+
+.users
+{
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.users > div > p
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.6em;
+	color: black;
+}
+
+#begin
+{
+	font-size: 3em;
+}
+
+#quizz
+{
+	width: 80vw;
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-self: flex-start;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.pre-quizz
+{
+	height: 20%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.pre-quizz > h1
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 2.4em;
+	color: white;
+	text-align: center;
+}
+
+.moment > p
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.4em;
+	margin: 2px;
+}
+
+.pre-quizz > h2
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 2em;
+	color: #EEF46B;
+	text-align: center;
+	box-shadow: 0.2em 0.2em #EEF46B;
+}
+
+.quests
+{
+	display: flex;
+	flex-direction: column;
+	height: 60%;
+	width: 100%;
+	justify-content: space-around;
+}
+
+.quests > button
+{
+	height: 20%;
+	width: 100%;
+	font-size: 2em;
+	color: #000000;
+	opacity: 0.8;
+}
+
+.quests > button:nth-child(1)
+{
+	background-color: #79DD9A;
+}
+
+.quests > button:nth-child(2)
+{
+	background-color: #79C2DD;
+}
+
+.quests > button:nth-child(3)
+{
+	background-color: #D479DD;
+}
+
+.quests > button:nth-child(4)
+{
+	background-color: #DDDD79;
+}
+
+#quizz > p
+{
+	display: flex;
+	align-self: flex-start;
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.6em;
+}
+
+#quizz > form:last-child
+{
+	display: flex;
+	align-self: flex-end;
+	height: 6%;
+	opacity: 1;
+	transition: 0.5s ease;
+}
+
+#quizz > form:last-child:hover
+{
+	opacity: 0.6;
+	transition: 0.5s ease;
+}
+
+#results
+{
+	width: 100%;
+	height: 30%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#results > h1
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 3em;
+	color: white;
+	text-align: center;
+}
+
+#results > h2
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 2.4em;
+	color: white;
+	text-align: center;
+}
+
+#results > h3
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1.8em;
+	color: white;
+	text-align: center;
+}
+
+footer
+{
+	position: absolute;
+	bottom: 0;
+	height: 6vh;
+	width: 80vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer > h3
+{
+	font-family: 'Cookie', sans-serif;
+	font-size: 1em;
+	color: black;
+}
+
+@media screen and (max-width: 640px)
+{
+	#formulaire > h1
+	{
+		font-size: 3em;
+	}
+
+	#formulaire
+	{
+		width: 90vw;
+	}
+
+	#formulaire > form
+	{
+		height: 50%;
+	}
+
+	#formulaire > form input
+	{
+		font-size: 1.6em;
+	}
+
+	#formulaire > form label
+	{
+		font-size: 1.6em;
+	}
+
+	#formulaire button
+	{
+		font-size: 1.8em;
+	}
+
+	.loading::before
+	{
+		content: "Veuillez patienter le temps que tous les utilisateurs nous rejoignent...";
+		font-size: 2em;
+	}
+
+	.loading::after
+	{
+		margin: -30px 0 0 -30px;
+		width: 60px;
+		height: 60px;
+	}
+
+	header
+	{
+		height: 20vh;
+		width: 90vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	header > h2
+	{
+		font-size: 2em;
+	}
+
+	header > div
+	{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	header > div h3
+	{
+		font-family: 'Cookie', sans-serif;
+		font-size: 1.2em;
+		margin: 0;
+		color: #000000;
+	}
+
+	header > div > a
+	{
+		text-decoration: none;
+	}
+
+	header > div > a > h3:last-child
+	{
+		font-size: 1.4em;
+		color: white;
+	}
+
+	#blocs
+	{
+		width: 90vw;
+	}
+
+	#blocs div
+	{
+		height: 30vh;
+		width: 40vw;
+	}
+
+	#blocs div > p
+	{
+		font-size: 2em;
+	}
+
+	#start > h1
+	{
+		font-size: 3em;
+	}
+
+	.users
+	{
+		width: 80%;
+	}
+
+	.users > div > p
+	{
+		font-size: 1.3em;
+	}
+
+	#quizz
+	{
+		width: 90vw;
+	}
+
+	.pre-quizz
+	{
+		height: 20%;
+	}
+
+	.pre-quizz > h1
+	{
+		font-size: 1.6em;
+	}
+
+	.moment > p
+	{
+		font-size: 1em;
+		margin: 0;
+	}
+
+	.pre-quizz > h2
+	{
+		font-size: 1.6em;
+	}
+
+	.quests
+	{
+		height: 50%;
+	}
+
+	.quests > button
+	{
+		height: 20%;
+		font-size: 1.4em;
+	}
+
+	#quizz > p
+	{
+		font-size: 1.2em;
+	}
+
+	#results
+	{
+		width: 80%;
+	}
+
+	#results > h1
+	{
+		font-size: 2.4em;
+	}
+
+	#results > h2
+	{
+		font-size: 2em;
+	}
+
+	footer > h3
+	{
+		font-size: 0.8em;
+	}
+
+}
